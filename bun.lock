@@ -33,6 +33,7 @@
       "name": "web",
       "version": "0.1.0",
       "dependencies": {
+        "@repo/env": "*",
         "@repo/ui": "*",
         "next": "16.1.5",
         "react": "^19.2.0",

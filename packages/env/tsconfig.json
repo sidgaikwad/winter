@@ -1,13 +1,18 @@
 {
-    "extends": "@repo/typescript-config/base.json",
-    "compilerOptions": {
-        "moduleResolution": "Bundler",
-        "module": "ESNext"
-    },
-    "include": [
-        "**/*.ts"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+  "extends": "@packages/tsconfig/base.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
+

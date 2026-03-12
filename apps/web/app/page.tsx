@@ -1,6 +1,6 @@
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
-import { isLocal } from "@packages/env";
+import { isLocal } from "@repo/env";
 import { env } from "@repo/env/web";
 import styles from "./page.module.css";
 

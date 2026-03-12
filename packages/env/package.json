@@ -41,7 +41,8 @@
     "@packages/tsconfig": "workspace:*",
     "@types/bun": "^1.1.14",
     "@types/node": "^22.15.3",
-    "tsdown": "^0.12.5",
+    "@typescript/native-preview": "^7.0.0-dev.20260312.1",
+    "tsdown": "^0.21.2",
     "typescript": "5.9.2"
   }
 }

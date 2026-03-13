@@ -1,5 +1,7 @@
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
+import { isLocal } from "@repo/env";
+import { env } from "@repo/env/web";
 import styles from "./page.module.css";
 
 type Props = Omit<ImageProps, "src"> & {
@@ -66,6 +68,29 @@ export default function Home() {
         <Button appName="web" className={styles.secondary}>
           Open alert
         </Button>
+
+        <div
+          style={{
+            marginTop: "2rem",
+            padding: "1rem",
+            border: "1px solid #ccc",
+            borderRadius: "8px",
+          }}
+        >
+          <h3>Environment Variables (via @repo/env)</h3>
+          <p>
+            <strong>App URL:</strong>{" "}
+            {isLocal(env.NEXT_PUBLIC_APP_URL)
+              ? "Not set (local)"
+              : env.NEXT_PUBLIC_APP_URL}
+          </p>
+          <p>
+            <strong>API URL:</strong>{" "}
+            {isLocal(env.NEXT_PUBLIC_API_URL)
+              ? "Not set (local)"
+              : env.NEXT_PUBLIC_API_URL}
+          </p>
+        </div>
       </main>
       <footer className={styles.footer}>
         <a
